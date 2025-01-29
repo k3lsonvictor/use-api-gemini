@@ -8,14 +8,14 @@ app.use(express.json());
 
 // Configurações de CORS
 const corsOptions = {
-  origin: ["https://weather-project-kappa-ten.vercel.app"], // Permite requisições da porta 3001
+  origin: "https://weather-project-kappa-ten.vercel.app", // Permite requisições da porta 3001
   methods: ["GET", "POST"], // Métodos permitidos
 };
 
 app.use(cors(corsOptions)); // Aplica o middleware CORS
 
 // Substitua pela sua chave de API
-const GEMINI_API_KEY = "AIzaSyBtJ5j3hXDiJqiZ01uZWodQiuddiaNSXnA";
+const GEMINI_API_KEY = "AIzaSyBemmIKo4kNIg1420tDalVBhYeg6kk7UGs";
 
 // URL da API
 const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
