@@ -8,7 +8,7 @@ app.use(express.json());
 
 // Configurações de CORS
 const corsOptions = {
-  origin: "http://localhost:3000", // Permite requisições da porta 3001
+  origin: ["http://localhost:3000", "https://weather-project-kappa-ten.vercel.app"], // Permite requisições da porta 3001
   methods: ["GET", "POST"], // Métodos permitidos
 };
 
