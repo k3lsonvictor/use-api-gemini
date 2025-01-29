@@ -2,20 +2,20 @@ const axios = require("axios");
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const port = 3000;
+const port = 8080;
 
 app.use(express.json());
 
 // Configurações de CORS
 const corsOptions = {
-  origin: "http://localhost:3001", // Permite requisições da porta 3001
+  origin: "http://localhost:3000", // Permite requisições da porta 3001
   methods: ["GET", "POST"], // Métodos permitidos
 };
 
 app.use(cors(corsOptions)); // Aplica o middleware CORS
 
 // Substitua pela sua chave de API
-const GEMINI_API_KEY = "AIzaSyCVXkwqB2DmeFPpy0boCSjEcAi-nEwNQVc";
+const GEMINI_API_KEY = "AIzaSyBtJ5j3hXDiJqiZ01uZWodQiuddiaNSXnA";
 
 // URL da API
 const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
